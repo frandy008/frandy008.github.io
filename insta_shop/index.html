@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Insta Shop</title>
+	<link rel="icon" href="img/instag-logo.png" type="image/png">
+  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style type="text/css">
+    #ajax-wait {
+      display: none;
+      position: fixed;
+      z-index: 1999
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Web -->
+  <div id='ajax-wait'>
+    <img alt='loading...' src='https://i.pinimg.com/originals/fa/75/e3/fa75e3a5714192a840c3ebc121952e45.gif' width='256' height='256' />
+  </div>
+  <!-- End Loading -->
+  <!--================ Start Header Menu Area =================-->
+	<header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand logo_h" href="index.html"><img src="img/insta-shop.png" width="90px" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target=".modal-owner">About WM</a></li>
+              <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Gabung Insta Shop</a></li>
+            </ul>
+
+            <ul class="nav-shop">
+              <li class="nav-item"><button data-toggle="modal" data-target=".modal-isiKeranjang" id="lihat-isi-keranjang"><i class="ti-shopping-cart"></i><span class="nav-shop__circle" id="jumlahBelanjaan">0</span></button> </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+	<!--================ End Header Menu Area =================-->
+
+  <main class="site-main">
+    
+    <!--================ Hero banner start =================-->
+    <section class="hero-banner">
+      <div class="container">
+        <div class="row no-gutters align-items-center pt-60px">
+          <div class="col-5 d-none d-sm-block">
+            <div class="hero-banner__img" id="header-logo">
+              <!-- Header logo disini -->
+            </div>
+          </div>
+          <div class="col-sm-7 col-lg-6 offset-lg-1 pl-4 pl-md-5 pl-lg-0">
+            <div class="hero-banner__content">
+              <h4>Shop is fun</h4>
+              <h2><span id="ig-nama">Nama IG</span> <span class="text-danger">Shop</span></h2>
+              <p id="ig-bio">Isi Bio disini.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ Hero banner start =================-->
+
+    <!-- ================ trending product section start ================= -->  
+    <section class="section-margin calc-60px">
+      <div class="container">
+        <div class="section-intro pb-60px">
+          <h2>Trending <span class="section-intro__style">Product</span></h2>
+        </div>
+        <div class="row" id="ig-data-gambar">
+          <!-- Data Product disini -->
+        </div>
+      </div>
+    </section>
+    <!-- ================ trending product section end ================= -->  
+    
+
+  </main>
+
+
+  <!--================ Start footer Area  =================-->	
+	<footer class="footer">
+
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row d-flex">
+					<p class="col-lg-12 footer-text text-center">
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This edited by <a href="https://frandy008.github.io" target="_blank">FDP Project</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--================ End footer Area  =================-->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Gabung ke Insta Shop</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-respon">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Username IG</label>
+            <input type="text" class="form-control" id="ig-user">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Token IG</label>
+            <textarea class="form-control" id="ig-token"></textarea>
+          </div>
+        </form>
+        <div class="form-group">
+          <span>* Untuk mendapatkan Access Token IG bisa klik <a href="https://instagram.pixelunion.net/" target="_BLANK">disini</a></span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" id="tombol-daftar" class="btn btn-primary">Daftar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="row justify-content-center pt-4 pb-4">
+        <img src="img/warning.png" alt="">
+        <div class="col-sm-12 text-center">Jangan lupa masukan No HP / WA sebelum melakukan pesanan</div>
+        <div class="row mt-2">
+          <div class="col-md-8">
+            <div class="form-group">
+              <input type="text" id="no_hp" placeholder="No HP" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <button class="btn btn-danger" id="tombol-masukanNomor">Simpan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Data Produk</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="rincian-data-product">
+        <!-- Data produk disini -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary tombol-masukanKeranjang">Masukan keranjang</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade modal-owner" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="card">
+        <img src="img/owner.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title text-center">IMFDP</h5>
+          <p class="card-text text-justify">Programer pemula yang hobby berexperiment dengan script-script / coding-coding aneh.</p>
+          <p class="text-center font-weight-bold">Support via Dana</p>
+          <img src="img/dana.jpg" class="img-thumbnail" alt="">
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modal-isiKeranjang" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nama Barang</th>
+              <th>Jumlah</th>
+              <th>Harga Satuan</th>
+              <th>Total Harga</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody id="isi-keranjang">
+            
+          </tbody>
+        </table>
+        <input type="hidden" id="total_berat" value="">
+        <input type="hidden" id="total_belanja" value="">
+        <hr>
+        <table class="table">
+          <thead>
+            <tr>
+              <th width="30%">Provinsi</th>
+              <th width="30%">Kabupaten</th>
+              <th>Service JNE</th>
+              <th>Ongkir</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <select class="custom-select" id="pilih-provinsi" onclick="ambil_provinsi()">
+                  <option selected>Pilih Provinsi</option>
+                </select>
+              </td>
+              <td>
+                <select class="custom-select" id="pilih-kabupaten" onclick="ambil_kabupaten()">
+                  <option selected>Pilih Kabupaten</option>
+                </select>
+              </td>
+              <td><input readonly="" id="service" class="form-control" placeholder="Pengiriman"></td>
+              <td><input readonly="" id="ongkir" class="form-control" placeholder="Ongkos kirim"></td>
+            </tr>
+            <tr>
+              <td colspan="3" align="right"><h5 class="form-text">Total Bayar</h5></td>
+              <td>
+                <input readonly="" class="form-control" id="totalBayar" value="" placeholder="Total Bayar">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <table class="table" id="tbl-proses-pesanan" hidden="">
+          <tbody>
+            <tr>
+              <td>
+                <input class="form-control" type="text" id="alamat-lengkap" value="" placeholder="Alamat lengkap : Nama Lengkap, Nama Jalan, No. Rumah">
+                <input type="hidden" id="data_provinsi" value="">
+                <input type="hidden" id="data_kabupaten" value="">
+              </td>
+              <td><button class="btn btn-success" id="proses-pesanan">Proses Pesanan</button></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Pesanan Masuk -->
+<div class="modal fade" id="pesananAdmin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Pesanan Masuk</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>No HP</th>
+              <th>Alamat</th>
+              <th>Total Bayar</th>
+            </tr>
+          </thead>
+          <tbody id="isi-table-pesanan-admin">
+            
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / Modal Pesanan Masuk -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- <script src="vendors/skrollr.min.js"></script> -->
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+  <script src="vendors/jquery.ajaxchimp.min.js"></script>
+  <!-- <script src="vendors/mail-script.js"></script> -->
+  <!-- <script src="js/main.js"></script> -->
+  <script src="js/data.js"></script>
+
+  <script src="js/loading.js"></script>
+
+  <script src="js/ongkir.js"></script>
+</body>
+</html>
