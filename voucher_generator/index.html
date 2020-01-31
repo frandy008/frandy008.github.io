@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Voucher Enabler</title>
+  
+  <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'><link rel="stylesheet" href="style.css">
+  <style type="text/css">
+    #ajax-wait {
+      display: none;
+      position: fixed;
+      z-index: 1999;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Web -->
+  <div id='ajax-wait'>
+    <img alt='loading...' src='https://i.pinimg.com/originals/fa/75/e3/fa75e3a5714192a840c3ebc121952e45.gif' width='128' height='128' />
+  </div>
+  <!-- End Loading -->
+<!-- partial:index.partial.html -->
+<div class="container">
+  <h1>Daftar User</h1>
+  
+  <div id="table" class="table-editable">
+    <span class="table-add glyphicon glyphicon-plus"></span>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Paket</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="data-user">
+        
+      </tbody>
+      <!-- This is our clonable table line -->
+    </table>
+  </div>
+  
+</div>
+
+<hr>
+
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <center id="tombol-tombol"></center>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <center>
+        <div id="kode-voucher"></div>
+      </center>
+    </div>
+  </div>
+</div>
+
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+  <script  src="script.js"></script>
+
+  <script type="text/javascript">
+    $( document ).ajaxStart( function() {
+      $( "#ajax-wait" ).css({
+        left: ( $(window).width() - 32 ) / 2 + "px", // 32 = lebar gambar
+        top: ( $(window).height() - 32 ) / 2 + "px", // 32 = tinggi gambar
+        display: "block"
+      })
+    }).ajaxComplete( function() {
+      $( "#ajax-wait" ).fadeOut();
+    });
+  </script>
+</body>
+</html>
