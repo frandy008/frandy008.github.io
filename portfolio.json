@@ -12,6 +12,12 @@
             "gambar": "https://id-live-01.slatic.net/p/230635e46b0fe7fed0c1ea3988b13cb4.jpg",
             "deskripsi": "Script ini adalah script bot yang berguna untuk mengikuti flashsale poco M3 di lazada. Untuk lebih lanjut sudah dijelaskan di page nya.",
             "link": "https://github.com/frandy008/lazada_slayer"
+        },
+        {
+            "judul": "BDL Kasir (POS)",
+            "gambar": "https://1.bp.blogspot.com/-ej5bh3jileg/YBtpH2loPCI/AAAAAAAAFsU/rg0yN-kaQCcSp2wOli328Gj36HXfz3NoQCLcBGAsYHQ/s16000/bdl_kasir.PNG",
+            "deskripsi": "Aplikasi penjualan berbasis Web, biasa nya dalam dunia aplikasi disebut Aplikasi POS.",
+            "link": "https://github.com/frandy008/bdl_kasir"
         }
     ]
 }
