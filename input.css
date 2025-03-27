@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+.font-lily{
+  font-family: "Lily Script One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+  font-family: 'poppins';
+}
+
+.panel {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+@layer utilities{
+  .text-stroke {
+    -webkit-text-stroke: 1px black; /* Stroke 2px dengan warna hitam */
+  }
+}
+
+@layer components {
+  .content-kemampuan{
+    @apply col-span-12 sm:col-span-6 lg:col-span-4 m-2 lg:m-4 px-4 py-2 lg:p-4 flex gap-4 items-center border-2 rounded-2xl;
+  }
+
+  .content-kemampuan.beginer{
+    @apply border-b-4 border-red-600;
+  }
+  .content-kemampuan.intermediate{
+    @apply border-b-4 border-blue-600;
+  }
+  .content-kemampuan.advanced{
+    @apply border-b-4 border-green-600;
+  }
+
+  .btn-hero {
+    @apply bg-white w-40 py-2 mx-2 rounded-sm hover:bg-black hover:text-white my-1 border-b-2;
+  }
+  
+  .nav-link{
+    @apply sm:border-double sm:border-4 py-1 px-3 sm:rounded-tr-3xl opacity-70 sm:hover:bg-white sm:hover:text-black sm:hover:rounded-br-3xl sm:hover:opacity-100;
+  }
+  
+  .nav-link.active {
+    @apply opacity-100 font-bold sm:bg-white sm:text-black;
+  }
+  
+  .nav-menu {
+    @apply fixed top-0 left-0 w-full h-full flex justify-center items-center bg-blue-300 opacity-0 invisible transition-all duration-300 sm:static sm:bg-transparent sm:opacity-100 sm:visible sm:h-auto sm:w-auto;
+  }
+  
+  .nav-menu.show {
+    @apply opacity-100 visible sm:hidden;
+  }
+  
+  .tab-link{
+    @apply px-4 py-2 rounded-lg border hover:bg-black hover:text-white text-xs sm:text-xl md:text-xs lg:text-xl;
+  }
+  
+  .tab-link.active{
+    @apply bg-blue-500 text-white;
+  }
+  
+  .tab-content{
+    @apply hidden;
+  }
+  
+  .tab-content.active{
+    @apply block;
+  }
+  
+  .text-header{
+    @apply text-3xl font-bold my-6 bg-blue-500 w-auto text-center py-4 px-10 text-white rounded-t-md border-b-4 border-black;
+  }
+
+  .portfolio-card{
+    @apply col-span-12 sm:col-span-4 lg:col-span-3 border-black border-2 rounded-md overflow-hidden m-2;
+  }
+
+  .timeline-garis{
+    @apply absolute left-99/100 sm:left-1/2 md:left-99/100 lg:left-1/2 top-0 transform -translate-x-1/2 h-full w-1 bg-gray-700;
+  }
+
+}
