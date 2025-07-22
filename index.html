@@ -4,435 +4,515 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IMFDP</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  
-</head>
-<body class="bg-gray-100">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/vendor/boxicon/css/boxicons.css">
+  <link rel="stylesheet" href="assets/vendor/owlcarousel/css/owl.carousel.css">
 
-  <nav class="fixed top-0 left-0 w-full bg-blue-500 h-16 border-b-3 border-black text-white z-50">
-    <div class="container p-4 flex justify-between m-auto items-center">
-      <div class="font-lily text-3xl group flex">
-        <span class="hidden group-hover:inline-block">Fra</span><span class="group-hover:lowercase">Ndy</span>
-      </div>
-      <div class="block sm:hidden z-100">
-        <button class="border-1 px-4 rounded-sm py-1" id="nav-menu">
-          <i class="bi bi-list" id="nav-icon"></i>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/x-icon" href="assets/img/favico.png">
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <nav class="navbar header-nav navbar-expand-lg">
+      <div class="container">
+        <!-- Brand Name/Logo -->
+        <a href="#" class="navbar-brand">
+          <h4 class="mb-2">MIT <span class="text-danger">Project</span></h4>
+        </a>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse-toggle">
+          <ul class="navbar-nav mx-auto">
+            <li>
+              <a href="#home" class="nav-link" data-scroll-nav="0">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="nav-link" data-scroll-nav="1">About</a>
+            </li>
+            <li>
+              <a href="#services" class="nav-link" data-scroll-nav="2">Services</a>
+            </li>
+            <li>
+              <a href="#contact" class="nav-link" data-scroll-nav="3">Skill</a>
+            </li>
+            <li>
+              <a href="#portfolio" class="nav-link" data-scroll-nav="4">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Button -->
+        <div class="ms-auto d-none d-lg-block">
+          <a href="#contact" class="colored-btn">Contact Now</a>
+        </div>
+
+        <!-- Mobile Menu Toggle-->
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
-      <div class="nav-menu">
-        <ul class="flex flex-col sm:flex-row gap-5 items-center">
-          <li class="nav-link active"><a href="#home">Home</a></li>
-          <li class="nav-link"><a href="#about">About</a></li>
-          <li class="nav-link"><a href="#portfolio">Portfolio</a></li>
-          <li class="nav-link"><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-  <div id="content" class="h-screen">
-    
-      <section class="my-4 h-[calc(100vh)] flex items-center" id="home">
-        <div class="container m-auto px-4">
-          <div class="grid grid-cols-12 group">
-    
-            <div class="col-span-12 sm:col-span-6 flex flex-col justify-center items-center order-2 sm:order-1">
-              <div class="bg-blue-500/40 p-10 max-w-md rounded-sm text-center border-b-2">
-                <div class="text-2xl mb-10 font-bold">
-                  Info Singkat aja
-                </div>
-                <div>
-                  <button class="btn-hero" onclick="showAlert('Info','No Data !')">CV</button>
-                  <a href="https://wa.me/6285656065964?text=Halo.%0Asaya%20menemukan%20kontak%20mu%20dari%20https%3A%2F%2Flocalbos.my.id" target="_blank"><button class="btn-hero">Hire Me</button></a>
-                </div>
-              </div>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="home-section bg-gray" data-scroll-index="0">
+      <div class="container">
+        <div class="anim-elements">
+          <div class="anim-element"><i class="bx bxl-html5"></i></div>
+          <div class="anim-element"><i class="bx bxl-nodejs"></i></div>
+          <div class="anim-element"><i class="bx bxl-vuejs"></i></div>
+          <div class="anim-element"><i class="bx bxl-android"></i></div>
+          <div class="anim-element"><i class="bx bxl-bootstrap"></i></div>
+        </div>
+        <div class="row gy-5 align-items-center">
+          <div class="col-lg-6">
+            <div class="home-intro text-center text-lg-start">
+              <h6>Hi, My name is Frandy</h6>
+              <h1>I'm a <span id="type-it"></span></h1>
+              <p>Welcome to my portfolio website. Here you can find my latest projects and contact information.</p>
+              <a href="#about" class="colored-btn mt-1">About Me</a>
             </div>
-            <div class="col-span-12 sm:col-span-6 order-1 sm:order-2">
-              <img src="./assets/img/hero.png" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <div class="home-image text-center">
+              <img src="https://avatars.githubusercontent.com/u/60122275?v=4">
             </div>
-    
           </div>
         </div>
-      </section>
-      
-      <section class="my-30 min-h-screen" id="about">
-        <div class="container m-auto px-2 sm:px-4">
-          <div class="w-full h-16 flex flex-col justify-center items-center">
-            <div class="text-header">
-              About
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section" data-scroll-index="1">
+      <div class="container">
+        <div class="row gy-5 align-items-center">
+          <div class="col-lg-6 text-center">
+            <img src="assets/img/information.png" class="img-fluid" alt="about me">
+          </div>
+          <div class="col-lg-6 ps-lg-5">
+            <div class="about-text">
+              <h3 class="h1 mb-3 text-dark fw-semibold">
+                I'm a Freelancer with 5+ years of experience
+              </h3>
+              <p>Saya adalah seorang web developer freelance dengan pengalaman lebih dari 5 tahun, khususnya dalam membangun aplikasi berbasis website menggunakan Node.js.<br>Saya fokus pada pembuatan aplikasi yang cepat, aman, dan mudah digunakan—mulai dari backend development, integrasi API, hingga deployment.<br>Selama ini, saya telah membantu berbagai bisnis dan individu membangun solusi digital yang efisien dan sesuai kebutuhan.<br>Ingin bangun aplikasi web yang andal? Saya siap membantu.</p>
             </div>
           </div>
-          <div class="grid grid-cols-12 border-2 border-y-4 sm:p-4">
-            
-            <div class="col-span-12 md:col-span-4 rounded-2xl my-2 flex justify-center">
-              <div class="flex flex-col items-center">
-                <div class="rounded-full h-10 w-10 border-8 mb-[-5px]"></div>
-                <div class="border-4 rounded-2xl overflow-hidden max-w-72">
-                  <div class="">
-                    <img src="https://avatars.githubusercontent.com/u/60122275?v=4" class="w-full">
-                  </div>
-                  <div class="bg-blue-500 p-4 text-center text-white">
-                    <p class="text-2xl sm:text-3xl">I Made Frandy</p>
-                    <p>Full Stack Web Develover</p>
-                  </div>
-                </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Section -->
+    <section id="services" class="section bg-gray" data-scroll-index="2">
+      <div class="container">
+        <div class="section-heading">
+          <h3>My Services</h3>
+        </div>
+        <div class="row gy-4">
+          <div class="col-md-6">
+            <div class="feature-box bg-1">
+              <div class="icon"><i class="bx bx-code-alt"></i></div>
+              <div class="content">
+                <h5>Custom Web Application Development</h5>
+                <p>Membangun aplikasi web dari nol sesuai kebutuhan bisnis Anda, dengan teknologi backend berbasis Node.js dan struktur yang scalable.</p>
               </div>
             </div>
-            <div class="col-span-12 md:col-span-8 my-2 p-4">
-              <div class="my-6 w-full mx-auto">
-                <div class="flex flex-row justify-between">
-                    <button onclick="openTab(event, 'tab1')" class="tab-link active">Bio Singkat</button>
-                    <button onclick="openTab(event, 'tab2')" class="tab-link">Kemampuan</button>
-                    <button onclick="openTab(event, 'tab3')" class="tab-link">Pengalaman</button>
-                </div>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-box bg-2">
+              <div class="icon"><i class="bx bx-transfer-alt"></i></div>
+              <div class="content">
+                <h5>RESTful API Development</h5>
+                <p>Pembuatan dan dokumentasi API yang cepat, aman, dan siap untuk diintegrasikan dengan berbagai platform (web, mobile, IoT).</p>
               </div>
-              <div class="border-2 rounded-xl p-4">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-box bg-3">
+              <div class="icon"><i class="bx bx-data"></i></div>
+              <div class="content">
+                <h5>Database Design & Integration</h5>
+                <p>Desain skema database dan integrasi menggunakan MongoDB, MySQL, atau PostgreSQL, sesuai kebutuhan aplikasi Anda.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-box bg-4">
+              <div class="icon"><i class="bx bx-broadcast"></i></div>
+              <div class="content">
+                <h5>Real-Time Applications</h5>
+                <p>Pengembangan aplikasi real-time seperti chat, notifikasi, atau dashboard live data dengan teknologi seperti  Socket.IO.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-box bg-5">
+              <div class="icon"><i class="bx bx-cloud-upload"></i></div>
+              <div class="content">
+                <h5>Deployment & Server Setup</h5>
+                <p>Setup server, konfigurasi deployment, dan CI/CD untuk memastikan aplikasi Anda berjalan stabil di production.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-box bg-6">
+              <div class="icon"><i class="bx bx-conversation"></i></div>
+              <div class="content">
+                <h5>Consultation & Technical Planning</h5>
+                <p>Diskusi teknis untuk merancang arsitektur aplikasi, memilih teknologi yang tepat, atau memecahkan masalah yang sedang Anda hadapi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <div id="tab1" class="tab-content active">
-                  <p class="text-2xl sm:text-3xl my-2">Perkenalan Diri Saya</p>
-                  <p class="my-2 text-justify">Hai perkenalkan, saya I Made Frandy, saya berasal dari kota Luwuk Banggai di Jl.Pulau Sandakan (Kelapa 2 Atas).</p>
-                  <p class="my-2 text-justify">Sebagai Web Developer harus update terhadap perkembagan Teknologi yang terus berkembang, Saat ini masih terus belajar di bidang Web Developer, yaitu mempelajari Node JS, Ionic dan beberapa Framework JS maupun PHP.</p>
+    <!-- Skill Section -->
+    <section id="skill" class="section" data-scroll-index="3">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-6">
+            <div class="section-heading text-start">
+              <h3>My Skills</h3>
+            </div>
+            <div class="skill-box">
+              <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-6">
+                  <div class="feature-box feature-box-small bg-1">
+                    <div class="icon">
+                      <i class="bx bxl-html5"></i>
+                    </div>
+                    <h6>HTML</h6>
+                  </div>
                 </div>
-
-                <div id="tab2" class="tab-content">
-                  <div class="grid grid-cols-12">
-                    <div class="content-kemampuan advanced">
-                      <div>
-                        <img src="./assets/img/node-js.png" class="w-10">
-                      </div>
-                      <div>
-                        <p class="text-xl">Node JS</p>
-                        <p class="text-md">(Advanced)</p>
-                      </div>
+                <div class="col-6 col-md-4 col-lg-6">
+                  <div class="feature-box feature-box-small bg-2">
+                    <div class="icon">
+                      <i class="bx bxl-css3"></i>
                     </div>
-                    <div class="content-kemampuan advanced">
-                      <div>
-                        <img src="./assets/img/javascript.png" class="w-10">
-                      </div>
-                      <div>
-                        <p class="text-xl">Javascript</p>
-                        <p class="text-md">(Advanced)</p>
-                      </div>
+                    <h6>CSS</h6>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-6">
+                  <div class="feature-box feature-box-small bg-3">
+                    <div class="icon">
+                      <i class="bx bxl-vuejs"></i>
                     </div>
-                    <div class="content-kemampuan intermediate">
-                      <div>
-                        <img src="./assets/img/html.png" class="w-10">
-                      </div>
-                      <div>
-                        <p class="text-xl">HTML</p>
-                        <p class="text-md">(Intermediate)</p>
-                      </div>
+                    <h6>Vue JS</h6>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-6">
+                  <div class="feature-box feature-box-small bg-4">
+                    <div class="icon">
+                      <i class="bx bxl-nodejs"></i>
                     </div>
-                    <div class="content-kemampuan beginer">
-                      <div>
-                        <img src="./assets/img/css.png" class="w-10">
-                      </div>
-                      <div>
-                        <p class="text-xl">CSS</p>
-                        <p class="text-md">(Beginer)</p>
-                      </div>
-                    </div>
-                    <div class="content-kemampuan intermediate">
-                      <div>
-                        <img src="./assets/img/php.png" class="w-10">
-                      </div>
-                      <div>
-                        <p class="text-xl">PHP</p>
-                        <p class="text-md">(Intermediate)</p>
-                      </div>
-                    </div>
-                    <div class="content-kemampuan intermediate">
-                      <div>
-                        <img src="./assets/img/ionic.png" class="w-10">
-                      </div>
-                      <div>
-                        <p class="text-xl">Ionic</p>
-                        <p class="text-md">(Intermediate)</p>
-                      </div>
-                    </div>
+                    <h6>Node JS</h6>
                   </div>
                 </div>
                 
-                <div id="tab3" class="tab-content">
-                  <!-- Timeline Container -->
-                  <div class="relative w-full max-w-3xl">
-                    <!-- Garis Tengah -->
-                    <div class="timeline-garis"></div>
+              </div>
+            </div>
+          </div>
 
-                    <!-- Timeline Item 1 -->
-                    <div class="relative flex items-center w-full mb-10 group">
-                      <div class="w-full min-w-full flex justify-start pr-8">
-                        <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 bg-blue-500 text-white p-5 rounded-lg border border-white shadow-lg transform transition duration-300 group-hover:scale-105">
-                          <p class="text-sm font-bold">2019</p>
-                          <p class="text-lg font-semibold">IT-GA</p>
-                          <p class="italic text-sm">PT. MMPP</p>
-                        </div>
-                      </div>
-                      <!-- Icon di Tengah -->
-                      <div class="absolute left-99/100 sm:left-1/2 md:left-99/100 lg:left-1/2 transform -translate-x-1/2 w-10 h-10 bg-gray-800 flex items-center justify-center rounded-full border-4 border-gray-600 text-white">
-                        📅
-                      </div>
-                      <div class="w-1/2"></div>
+          <div class="col-lg-6 text-center">
+            <img src="assets/img/skills.png" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="portfolio" class="section bg-gray" data-scroll-index="4">
+      <div class="container">
+        <div class="section-heading">
+          <h3>Latest Projects</h3>
+        </div>
+        <div class="portfolio-box">
+          <div class="row gx-3 mb-5 pb-lg-3 mb-lg-3 gy-4 justify-content-around align-items-center">
+            <div class="col-md-6 col-lg-5">
+              <div class="portfolio-img">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="assets/img/main-portfolio/absen-banggai.png">
+                  <img src="assets/img/main-portfolio/absen-banggai.png">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5">
+              <div class="portfolio-text">
+                <span>Web Application</span>
+                <h4>Aplikasi Absen Banggai</h4>
+                <a href="http://e-absen.banggaikab.go.id" class="colored-btn" target="_blank">View</a>
+              </div>
+            </div>
+          </div>
+          <div class="row gx-3 mb-5 pb-lg-3 mb-lg-3 gy-4 justify-content-around align-items-center flex-row-reverse">
+            <div class="col-md-6 col-lg-5">
+              <div class="portfolio-img">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="assets/img/main-portfolio/absen-damkar.png">
+                  <img src="assets/img/main-portfolio/absen-damkar.png">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5">
+              <div class="portfolio-text">
+                <span>Web Application</span>
+                <h4>Aplikasi Absen Damkar</h4>
+                <a href="#" class="colored-btn">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolioMini" class="section bg-success" data-scroll-index="4">
+      <div class="container">
+        <div class="section-heading">
+          <h3 class="text-white">Mini Projects</h3>
+        </div>
+        <div class="portfolio-box">
+          <div class="row gx-3 mb-5 pb-lg-3 mb-lg-3 gy-4 justify-content-around align-items-center">
+            <div class="col-md-4 col-lg-3">
+              <div class="portfolio-img">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="assets/img/portfolio/sisfo_bengkel.png"><img src="assets/img/portfolio/sisfo_bengkel.png"></a>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <div class="portfolio-img">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="assets/img/portfolio/sisfo_gereja.png"><img src="assets/img/portfolio/sisfo_gereja.png"></a>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <div class="portfolio-img">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="assets/img/portfolio/sisfo_gilingan.png"><img src="assets/img/portfolio/sisfo_gilingan.png"></a>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <div class="portfolio-img">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="assets/img/portfolio/sisfo_jadwal.png"><img src="assets/img/portfolio/sisfo_jadwal.png"></a>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <div class="portfolio-img">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="assets/img/portfolio/sisfo_keuangan.png"><img src="assets/img/portfolio/sisfo_keuangan.png"></a>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <div class="portfolio-img">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="assets/img/portfolio/sisfo_khursus.png"><img src="assets/img/portfolio/sisfo_khursus.png"></a>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <div class="portfolio-img">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="assets/img/portfolio/sisfo_pemesanan_kue.png"><img src="assets/img/portfolio/sisfo_pemesanan_kue.png"></a>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <div class="portfolio-img">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="assets/img/portfolio/sisfo_penjualan_bunga.png"><img src="assets/img/portfolio/sisfo_penjualan_bunga.png"></a>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <div class="portfolio-img">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="assets/img/portfolio/sisfo_penjualan_ikan.png"><img src="assets/img/portfolio/sisfo_penjualan_ikan.png"></a>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <div class="portfolio-img">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="assets/img/portfolio/sisfo_produksi_tahu.png"><img src="assets/img/portfolio/sisfo_produksi_tahu.png"></a>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <div class="portfolio-img">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="assets/img/portfolio/sisfo_sadar_stay.png"><img src="assets/img/portfolio/sisfo_sadar_stay.png"></a>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <div class="portfolio-img">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-img="assets/img/portfolio/sisfo_tv_kabel.png"><img src="assets/img/portfolio/sisfo_tv_kabel.png"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h3>Testimonials</h3>
+        </div>
+        <div class="owl-carousel">
+          <div class="feature-box mb-4">
+            <div class="img">
+              <img src="https://cdn-icons-png.freepik.com/256/15543/15543109.png">
+            </div>
+            <div class="content">
+              <p class="mb-3">
+                Senang bisa bekerjasama dengan tim developer nya.
+              </p>
+              <h6 class="mb-0 text-dark fw-semibold">
+                I KADEK DARMAYASA, Amd.Kom
+              </h6>
+              <small>Admin Absensi Kabupaten Banggai</small>
+            </div>
+          </div>
+          <div class="feature-box mb-4">
+            <div class="img">
+              <img src="https://cdn-icons-png.freepik.com/256/15543/15543109.png">
+            </div>
+            <div class="content">
+              <p class="mb-3">
+                Aplikasi nya bagus, sangat membantu
+              </p>
+              <h6 class="mb-0 text-dark fw-semibold">
+                EKO PRIYADI, S.T
+              </h6>
+              <small>Admin Absensi Kabupaten Banggai</small>
+            </div>
+          </div>
+          <div class="feature-box mb-4">
+            <div class="img">
+              <img src="https://cdn-icons-png.freepik.com/256/15543/15543109.png">
+            </div>
+            <div class="content">
+              <p class="mb-3">
+                Diluar ekspektasi, lebih bagus dari gambaran yang saya berikan.
+              </p>
+              <h6 class="mb-0 text-dark fw-semibold">
+                TRIANSYAH PUTERA, ST., M.URP
+              </h6>
+              <small>Kasubag Perencanaan DISDAMKAR</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section bg-dark">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-6">
+            <div class="contact-form">
+              <h2 class="text-dark">Get in touch</h2>
+              <p class="lead">Hubungi saya dari form di bawah.</p>
+              <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScYn11yOUS3fQOyF0siWsLW8fv756Cs2gmWrI7R39k8cOZhAQ/formResponse" method="post" id="contact-form">
+                <div class="row gy-4 gx-3">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="" class="form-label">Name</label>
+                      <input type="text" class="form-control" name="entry.1333193196">
                     </div>
-
-                    <!-- Timeline Item 2 -->
-                    <div class="relative flex items-center w-full mb-10 group">
-                      <div class="w-1/2 sm:order-1 order-3 z-10"></div>
-                      <div class="absolute left-99/100 sm:left-1/2 md:left-99/100 lg:left-1/2 transform -translate-x-1/2 w-10 h-10 bg-gray-800 flex items-center justify-center rounded-full border-4 border-gray-600 text-white sm:order-2 order-2 z-30">
-                        📅
-                      </div>
-                      <div class="w-full min-w-full sm:w-1/2 md:w-full lg:w-1/2 pr-8 sm:pr-0 sm:pl-8 md:pr-8 md:pl-0 lg:pr-0 lg:pl-8 flex justify-end sm:order-3 order-1 z-20">
-                        <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 bg-green-500 text-white p-5 rounded-lg border border-white shadow-lg transform transition duration-300 group-hover:scale-105">
-                          <p class="text-sm font-bold">2020 - Sekarang</p>
-                          <p class="text-lg font-semibold">Freelance Web Developer</p>
-                          <p class="text-sm">Membuat Web Application untuk kebutuhan akademik dan instansi pemerintahan.</p>
-                        </div>
-                      </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="" class="form-label">Whatsapp</label>
+                      <input type="text" class="form-control" name="entry.495803901">
                     </div>
-
-                    <!-- Timeline Item 3 -->
-                    <div class="relative flex items-center w-full mb-10 group">
-                      <div class="w-full min-w-full flex justify-start pr-8">
-                        <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 bg-orange-500 text-white p-5 rounded-lg border border-white shadow-lg transform transition duration-300 group-hover:scale-105">
-                          <p class="text-sm font-bold">2023 - 2025</p>
-                          <p class="text-lg font-semibold">Network Engineering</p>
-                          <p class="italic text-sm">Dinas Komunikasi Informatika Statistik dan Persandian Kab. Banggai</p>
-                        </div>
-                      </div>
-                      <!-- Icon di Tengah -->
-                      <div class="absolute left-99/100 sm:left-1/2 md:left-99/100 lg:left-1/2 transform -translate-x-1/2 w-10 h-10 bg-gray-800 flex items-center justify-center rounded-full border-4 border-gray-600 text-white">
-                        📅
-                      </div>
-                      <div class="w-1/2"></div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="" class="form-label">Email</label>
+                      <input type="email" class="form-control" name="entry.1737399632">
                     </div>
-
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="" class="form-label">Message</label>
+                      <textarea class="form-control" name="entry.1348622384"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="colored-btn" type="submit">Send Message</button>
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
-    
+          </div>
+
+          <div class="col-lg-5 ms-auto col-xs-4">
+            <div class="pb-5 d-none d-md-block">
+              <img src="assets/img/4849052.webp" width="50%">
+            </div>
+            <ul class="contact-infos">
+              <li>
+                <div class="icon bg-1">
+                  <i class="bx bx-phone"></i>
+                </div>
+                <div class="col ps-3">
+                  <h5>Phone</h5>
+                  <p>0856-5606-5964</p>
+                </div>
+              </li>
+              <li>
+                <div class="icon bg-2">
+                  <i class="bx bx-mail-send"></i>
+                </div>
+                <div class="col ps-3">
+                  <h5>Mail</h5>
+                  <p>frandy2013ti@gmail.com</p>
+                </div>
+              </li>
+              <li>
+                <div class="icon bg-3">
+                  <i class="bx bx-map"></i>
+                </div>
+                <div class="col ps-3">
+                  <h5>Temporary Address</h5>
+                  <p>Simpong, Kel. Simpong, Kec. Luwuk Selatan, Kab. Banggai</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+  </main>
 
-      <section class="my-30 min-h-screen" id="portfolio">
-        <div class="container m-auto px-2 sm:px-4">
-          <div class="w-full h-16 flex flex-col justify-center items-center">
-            <div class="text-header">
-              Portfolio
-            </div>
-          </div>
-
-          <div class="grid grid-cols-12 border-2 border-y-4 p-4">
-
-            <div class="portfolio-card">
-              <div class="">
-                <img src="./assets/img/portfolio/sisfo_bengkel.png" class="cursor-pointer w-full h-auto" onclick="openImagePopup(this.src)">
-              </div>
-              <div></div>
-            </div>
-
-            <div class="portfolio-card">
-              <div class="">
-                <img src="./assets/img/portfolio/sisfo_gereja.png" class="cursor-pointer w-full h-auto" onclick="openImagePopup(this.src)">
-              </div>
-              <div></div>
-            </div>
-
-            <div class="portfolio-card">
-              <div class="">
-                <img src="./assets/img/portfolio/sisfo_gilingan.png" class="cursor-pointer w-full h-auto" onclick="openImagePopup(this.src)">
-              </div>
-              <div></div>
-            </div>
-
-            <div class="portfolio-card">
-              <div class="">
-                <img src="./assets/img/portfolio/sisfo_jadwal.png" class="cursor-pointer w-full h-auto" onclick="openImagePopup(this.src)">
-              </div>
-              <div></div>
-            </div>
-
-            <div class="portfolio-card">
-              <div class="">
-                <img src="./assets/img/portfolio/sisfo_keuangan.png" class="cursor-pointer w-full h-auto" onclick="openImagePopup(this.src)">
-              </div>
-              <div></div>
-            </div>
-
-            <div class="portfolio-card">
-              <div class="">
-                <img src="./assets/img/portfolio/sisfo_khursus.png" class="cursor-pointer w-full h-auto" onclick="openImagePopup(this.src)">
-              </div>
-              <div></div>
-            </div>
-
-            <div class="portfolio-card">
-              <div class="">
-                <img src="./assets/img/portfolio/sisfo_pemesanan_kue.png" class="cursor-pointer w-full h-auto" onclick="openImagePopup(this.src)">
-              </div>
-              <div></div>
-            </div>
-
-            <div class="portfolio-card">
-              <div class="">
-                <img src="./assets/img/portfolio/sisfo_penjualan_bunga.png" class="cursor-pointer w-full h-auto" onclick="openImagePopup(this.src)">
-              </div>
-              <div></div>
-            </div>
-
-            <div class="portfolio-card">
-              <div class="">
-                <img src="./assets/img/portfolio/sisfo_penjualan_ikan.png" class="cursor-pointer w-full h-auto" onclick="openImagePopup(this.src)">
-              </div>
-              <div></div>
-            </div>
-
-            <div class="portfolio-card">
-              <div class="">
-                <img src="./assets/img/portfolio/sisfo_produksi_tahu.png" class="cursor-pointer w-full h-auto" onclick="openImagePopup(this.src)">
-              </div>
-              <div></div>
-            </div>
-
-            <div class="portfolio-card">
-              <div class="">
-                <img src="./assets/img/portfolio/sisfo_sadar_stay.png" class="cursor-pointer w-full h-auto" onclick="openImagePopup(this.src)">
-              </div>
-              <div></div>
-            </div>
-
-            <div class="portfolio-card">
-              <div class="">
-                <img src="./assets/img/portfolio/sisfo_tv_kabel.png" class="cursor-pointer w-full h-auto" onclick="openImagePopup(this.src)">
-              </div>
-              <div></div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-      
-      <section class="my-30 min-h-screen pb-20" id="contact">
-        <div class="container m-auto px-2 sm:px-4">
-          <div class="w-full h-16 flex flex-col justify-center items-center">
-            <div class="text-header">
-              Contact
-            </div>
-          </div>
-
-          <div class="grid grid-cols-12 border-2 border-y-4 p-4">
-            <div class="col-span-12 md:col-span-6 mb-4">
-              <div class="grid grid-cols-12">
-                <div class="col-span-12 md:col-span-6 lg:col-span-4">
-                  <a href="https://www.instagram.com/im_frandy_/" target="_blank">
-                    <div class="flex gap-3 items-center m-4">
-                      <div>
-                        <img src="./assets/img/Instagram_icon.png" class="w-8">
-                      </div>
-                      <div>@im_frandy_</div>
-                    </div>
-                  </a>
-                </div>
-  
-                <div class="col-span-12 md:col-span-6 lg:col-span-4">
-                  <a href="https://www.tiktok.com/@im_frandy_" target="_blank">
-                    <div class="flex gap-3 items-center m-4">
-                      <div>
-                        <img src="./assets/img/tiktok.png" class="w-8">
-                      </div>
-                      <div>@im_frandy</div>
-                    </div>
-                  </a>
-                </div>
-  
-                <div class="col-span-12 md:col-span-6 lg:col-span-4">
-                  <a href="https://id.linkedin.com/in/im-frandy" target="_blank">
-                    <div class="flex gap-3 items-center m-4">
-                      <div>
-                        <img src="./assets/img/linkedin.png" class="w-8">
-                      </div>
-                      <div>im-frandy</div>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="col-span-12 m-4">
-                  <div class="lg:pr-30">
-                    <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=frandy008&show_icons=true&locale=en&layout=compact" class="w-full" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-span-12 md:col-span-6">
-              <div class="bg-blue-500 border-2 p-4 rounded-md">
-                <div class="text-white m-4">
-                  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScYn11yOUS3fQOyF0siWsLW8fv756Cs2gmWrI7R39k8cOZhAQ/formResponse" method="post" id="contact-form">
-                    <h1 class="text-center text-2xl font-bold">Hubungi saya</h1>
-                    <div class="mb-2">
-                      <label for="">Nama</label>
-                      <input type="text" class="w-full p-2 border-2 rounded-md text-xs" name="entry.1333193196" required>
-                    </div>
-                    <div class="mb-2">
-                      <label for="">WhatsApp</label>
-                      <input type="number" class="w-full p-2 border-2 rounded-md text-xs" name="entry.495803901" required>
-                    </div>
-                    <div class="mb-2">
-                      <label for="">E-mail</label>
-                      <input type="email" class="w-full p-2 border-2 rounded-md text-xs" name="entry.1737399632" required>
-                    </div>
-                    <div class="mb-2">
-                      <label for="">Pesan</label>
-                      <textarea class="w-full p-2 border-2 rounded-md text-xs" name="entry.1348622384" required rows="4"></textarea>
-                    </div>
-                    <div class="flex justify-end">
-                      <button class="p-2 px-6 bg-black border-2 rounded-sm hover:bg-blue-400 hover:border-2">Kirim</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 py-2">
+          <div class="nav justify-content-center justify-content-md-start">
+            <a href="https://www.facebook.com/chadex.frd" target="_blank"><i class="bx bxl-facebook"></i></a>
+            <a href="https://twitter.com/im_frandy_" target="_blank"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.instagram.com/im_frandy_" target="_blank"><i class="bx bxl-instagram"></i></a>
+            <a href="https://id.linkedin.com/in/im-frandy" target="_blank"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://www.pinterest.com/" target="_blank"><i class="bx bxl-pinterest"></i></a>
           </div>
         </div>
-      </section>
+        <div class="col-md-6 py-2 text-center text-md-end">
+          <p class="m-0">&copy; 2025 Copyright all rights reserved | Developed by <a href="http://localbos.my.id">IMFDP</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  </div>
-
-<!-- Popup -->
-<div id="imagePopup" class="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center hidden z-50">
-  <div class="relative max-w-screen-lg w-full p-4">
-    <!-- Tombol Close -->
-    <button onclick="closeImagePopup()" 
-            class="absolute top-1 right-1 text-white bg-red-500 rounded-full px-3.5 py-2">
-      ✕
-    </button>
-    <!-- Gambar yang ditampilkan -->
-    <img id="popupImage" src="" class="w-full object-contain rounded-lg shadow-lg">
-  </div>
-</div>
-
-<!-- Modal Container -->
-<div id="customAlert" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center hidden">
-  <div class="bg-white p-6 rounded-lg shadow-lg w-80">
-    <h2 class="text-xl font-bold text-center" id="alertTitle">Berhasil</h2>
-    <p class="text-center mb-4" id="alertMessage">Pesan berhasil dikirim!</p>
-    <div class="flex justify-center">
-      <button id="closeAlert" class="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">OK</button>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Preview</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="" class="img-preview img-fluid">
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-
-  <script src="./assets/js/script.js"></script>
-  <script src="./assets/js/scrioll.gsap.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/jquery/jquery-3.7.1.min.js"></script>
+  <script src="assets/vendor/typed/typed.js"></script>
+  <script src="assets/vendor/owlcarousel/js/owl.carousel.min.js"></script>
+  <script src="assets/vendor/scrollit/js/scrollIt.min.js"></script>
+  <script src="assets/vendor/sweetalert2/sweetalert2.min.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
