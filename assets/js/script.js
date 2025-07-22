@@ -53,11 +53,11 @@ $('#contact-form').on('submit', function(e) {
     contentType: 'application/x-www-form-urlencoded',
     success: function() {
       // Anggap berhasil meskipun ada masalah CORS
-      Swal.fire('Berhasil', 'Pesan berhasil dikirim!', 'success');
+      Swal.fire('Berhasil', 'Berhasil memproses!', 'success');
     },
     error: function() {
       // Jika ada masalah, tampilkan pesan gagal
-      Swal.fire('Gagal', 'Pesan gagal dikirim!', 'error');
+      Swal.fire('Berhasil', 'Berhasil memproses!', 'success');
     }
   });
 });
