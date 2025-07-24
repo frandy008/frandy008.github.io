@@ -84,6 +84,12 @@ a:hover{
   width: 100%;
 }
 
+@media (max-width: 576px){
+  .section .section-heading h3 {
+    font-size: 24px;
+  }
+}
+
 @media (max-width: 991px) {
   .main-header .navbar-collapse{
     border-bottom: 2px solid var(--dark-color);
